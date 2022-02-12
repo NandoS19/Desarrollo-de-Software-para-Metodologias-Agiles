@@ -1,0 +1,13 @@
+{
+	"Estudiantes":{
+		"1":{
+			"nombre": "Juan Solis",
+			"carrera": "Sistemas de informacion"
+		},
+
+		"2":{
+			"nombre": "Martha Zuñiga",
+			"carrera": "Telematica"
+		}
+	}
+}
