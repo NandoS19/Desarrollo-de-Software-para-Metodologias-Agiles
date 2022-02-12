@@ -1,0 +1,88 @@
+public class RegionDAOImpl implements RegionDAO{
+
+    @Override
+    public void agregarRegion(Regions obj_Region) {
+        Session session=null;
+        try{
+            session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.save(obj_Region);
+        session.getTransaction().commit();
+            
+        }
+        catch(HibernateException e){
+            System.out.println(e.getMessage());
+            session.getTransaction().rollback();   
+        }
+        finally{
+            if(session != null){
+                session.close();
+            }
+        }
+    }
+
+    @Override
+    public void actualizarRegion(Regions obj_Region) {
+        Session session=null;
+        try{
+            session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.update(obj_Region);
+        session.getTransaction().commit();
+            
+        }
+        catch(HibernateException e){
+            System.out.println(e.getMessage());
+            session.getTransaction().rollback();   
+        }
+        finally{
+            if(session != null){
+                session.close();
+            }
+        }
+        
+    }
+
+    @Override
+    public void eliminarRegion(Regions obj_Region) {
+        Session session=null;
+        try{
+        session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.delete(obj_Region);
+        session.getTransaction().commit();
+            
+        }
+        catch(HibernateException e){
+            System.out.println(e.getMessage());
+            session.getTransaction().rollback();   
+        }
+        finally{
+            if(session != null){
+                session.close();
+            }
+        }  
+    }
+
+    @Override
+    public List<Regions> consultarRegion() {
+        Session session=null;
+        List<Regions> lstRegions = null;
+        try{
+        session = HibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("From Regions order by regionId");
+        lstRegions = query.list();
+            
+        }
+        catch(HibernateException e){
+            System.out.println(e.getMessage()); 
+        }
+        finally{
+            if(session != null){
+                session.close();
+            }
+        }
+        return lstRegions;
+    }
+    
+}
