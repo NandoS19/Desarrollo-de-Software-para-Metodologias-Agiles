@@ -1,0 +1,27 @@
+<p>BIENVENIDO A MI PROGRAMA</p>
+<p>Compartir seguridad en el sistema</p>
+<p>Nomina alumnos:</p>
+<table style="width: 22px;">
+<tbody>
+<tr>
+<td style="width: 10px;">nombre</td>
+<td style="width: 10px;">apellido</td>
+<td style="width: 10px;">ciudad</td>
+</tr>
+<tr>
+<td style="width: 10px;">karen</td>
+<td style="width: 10px;">gomez</td>
+<td style="width: 10px;">cuenca</td>
+</tr>
+<tr>
+<td style="width: 10px;">luisa</td>
+<td style="width: 10px;">lopez</td>
+<td style="width: 10px;">ambato</td>
+</tr>
+<tr>
+<td style="width: 10px;">carlos</td>
+<td style="width: 10px;">paes</td>
+<td style="width: 10px;">ambato</td>
+</tr>
+</tbody>
+</table>
